@@ -1,0 +1,55 @@
+.to-top {
+  background:#000;
+  position:fixed;
+  bottom:12px;
+  right:12px;
+  height: 46px;
+  width: 46px;
+  pointer-events:none;
+  display: block; 
+  z-index:9999; 
+  visibility: hidden; 
+  transition: all 1s;
+  border-radius:50px;
+  opacity:0;
+  &.active-progress {
+    opacity: 1;
+    visibility: visible;
+    bottom:12px;
+    pointer-events:all;
+    cursor: pointer;    
+    transition: all 1s;
+  }
+  svg{
+   &.progress-circle{
+      path {
+        fill: none;
+        stroke:#a30000;
+        stroke-width:6;
+        box-sizing:border-box;
+        transition: all 0.2s;
+      }
+    }    
+  } 
+  .to-top-icon {
+    position: absolute;
+    text-align: center;
+    left: 0;
+    top: 6px;
+    height: 34px;
+    width: 46px;
+    cursor: pointer;
+    display: block;
+    z-index: 1;
+    transition: all 0.2s;
+  }
+}
+
+.footer-space{
+  .mobile-call, .to-top{
+    bottom:60px;
+  }
+  .side-mail-icon {
+    bottom:112px !important;
+  }
+}
